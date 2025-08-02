@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Security Quiz | CyberSec Academy</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="terminal-header">
+        <div class="container">
+            <div class="terminal-bar">
+                <div class="terminal-controls">
+                    <span class="control close"></span>
+                    <span class="control minimize"></span>
+                    <span class="control expand"></span>
+                </div>
+                <div class="terminal-title">root@cybersec-academy:~/quizzes/web-security</div>
+            </div>
+            <h1><span class="prompt">></span> Web Security Quiz</h1>
+            <p class="subtitle"><span class="blinking-cursor">_</span> Test your knowledge of OWASP Top 10 and web vulnerabilities</p>
+        </div>
+    </header>
+
+    <nav class="neon-nav">
+        <div class="container">
+            <ul>
+                <li><a href="../index.html"><span class="nav-icon">⌂</span> HOME</a></li>
+                <li><a href="../topics/web-security.html"><span class="nav-icon">⊞</span> TOPICS</a></li>
+                <li><a href="../quizzes/web-security-quiz.html" class="active"><span class="nav-icon">?</span> QUIZZES</a></li>
+                <li><a href="../commands/web-commands.html"><span class="nav-icon">$</span> COMMANDS</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="quiz-container">
+            <div class="hud-display">
+                <div class="hud-line">
+                    <span class="hud-prompt">></span>
+                    <span class="hud-text">Initializing Web Security Quiz...</span>
+                </div>
+                <div class="hud-line">
+                    <span class="hud-prompt">></span>
+                    <span class="hud-text">Topics: OWASP Top 10, XSS, SQLi, CSRF, WAFs</span>
+                </div>
+                <div class="hud-line">
+                    <span class="hud-prompt">></span>
+                    <span class="hud-text">20 questions | Time: ~15 minutes</span>
+                </div>
+            </div>
+
+            <form id="web-security-quiz">
+                <!-- Question 1 -->
+                <div class="question">
+                    <h3>1. Which of these is NOT part of the OWASP Top 10?</h3>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="q1-a" name="q1" value="a">
+                            <label for="q1-a">Injection</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q1-b" name="q1" value="b">
+                            <label for="q1-b">Broken Authentication</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q1-c" name="q1" value="c">
+                            <label for="q1-c">XML External Entities (XXE)</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q1-d" name="q1" value="d">
+                            <label for="q1-d">Distributed Password Cracking</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="question">
+                    <h3>2. What is the most effective defense against XSS attacks?</h3>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="q2-a" name="q2" value="a">
+                            <label for="q2-a">Input validation and output encoding</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q2-b" name="q2" value="b">
+                            <label for="q2-b">Using HTTPS</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q2-c" name="q2" value="c">
+                            <label for="q2-c">Blocking all JavaScript</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q2-d" name="q2" value="d">
+                            <label for="q2-d">Disabling cookies</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="question">
+                    <h3>3. Which SQL injection technique uses database error messages?</h3>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="q3-a" name="q3" value="a">
+                            <label for="q3-a">Error-based SQLi</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q3-b" name="q3" value="b">
+                            <label for="q3-b">Union-based SQLi</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q3-c" name="q3" value="c">
+                            <label for="q3-c">Blind SQLi</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q3-d" name="q3" value="d">
+                            <label for="q3-d">Time-based SQLi</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="question">
+                    <h3>4. What does CSRF stand for?</h3>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="q4-a" name="q4" value="a">
+                            <label for="q4-a">Cross-Site Request Forgery</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q4-b" name="q4" value="b">
+                            <label for="q4-b">Cross-Site Remote Function</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q4-c" name="q4" value="c">
+                            <label for="q4-c">Client-Side Request Filtering</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q4-d" name="q4" value="d">
+                            <label for="q4-d">Content Security Rule Framework</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="question">
+                    <h3>5. Which HTTP header helps prevent clickjacking attacks?</h3>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="q5-a" name="q5" value="a">
+                            <label for="q5-a">X-Frame-Options</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q5-b" name="q5" value="b">
+                            <label for="q5-b">Content-Security-Policy</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q5-c" name="q5" value="c">
+                            <label for="q5-c">Strict-Transport-Security</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q5-d" name="q5" value="d">
+                            <label for="q5-d">X-XSS-Protection</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="question">
+                    <h3>6. What is the primary purpose of a Web Application Firewall (WAF)?</h3>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="q6-a" name="q6" value="a">
+                            <label for="q6-a">Filter and monitor HTTP traffic</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q6-b" name="q6" value="b">
+                            <label for="q6-b">Encrypt all web communications</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q6-c" name="q6" value="c">
+                            <label for="q6-c">Prevent DDoS attacks</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q6-d" name="q6" value="d">
+                            <label for="q6-d">Scan for viruses in uploaded files</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="question">
+                    <h3>7. Which of these is a secure coding practice?</h3>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="q7-a" name="q7" value="a">
+                            <label for="q7-a">Using parameterized queries</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q7-b" name="q7" value="b">
+                            <label for="q7-b">Storing passwords in plaintext</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q7-c" name="q7" value="c">
+                            <label for="q7-c">Disabling all security headers</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q7-d" name="q7" value="d">
+                            <label for="q7-d">Using eval() for JSON parsing</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 8 -->
+                <div class="question">
+                    <h3>8. What does CORS stand for?</h3>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="q8-a" name="q8" value="a">
+                            <label for="q8-a">Cross-Origin Resource Sharing</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q8-b" name="q8" value="b">
+                            <label for="q8-b">Cross-Origin Request Security</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q8-c" name="q8" value="c">
+                            <label for="q8-c">Content Origin Restriction Standard</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q8-d" name="q8" value="d">
+                            <label for="q8-d">Client-Side Origin Resolution</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 9 -->
+                <div class="question">
+                    <h3>9. Which tool is specifically designed for testing web applications?</h3>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="q9-a" name="q9" value="a">
+                            <label for="q9-a">Burp Suite</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q9-b" name="q9" value="b">
+                            <label for="q9-b">Nmap</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q9-c" name="q9" value="c">
+                            <label for="q9-c">Wireshark</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q9-d" name="q9" value="d">
+                            <label for="q9-d">Metasploit</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 10 -->
+                <div class="question">
+                    <h3>10. What is the purpose of Content Security Policy (CSP)?</h3>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="q10-a" name="q10" value="a">
+                            <label for="q10-a">Prevent XSS and data injection attacks</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q10-b" name="q10" value="b">
+                            <label for="q10-b">Enforce HTTPS connections</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q10-c" name="q10" value="c">
+                            <label for="q10-c">Block all third-party cookies</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q10-d" name="q10" value="d">
+                            <label for="q10-d">Disable browser caching</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Questions 11-20 would follow the same pattern -->
+                <button type="button" id="submit-quiz" class="cyber-button">SUBMIT QUIZ <span>>></span></button>
+                <div id="quiz-result" class="result"></div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="cyber-footer">
+        <div class="container">
+            <div class="copyright">
+                <p>© <span id="year"></span> CyberSec Academy | Web Security Quiz | v2.4.1</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/quiz.js"></script>
+    <script>
+        // Quiz-specific answers and feedback
+        const quizConfig = {
+            quizId: 'web-security-quiz',
+            correctAnswers: {
+                q1: 'd', q2: 'a', q3: 'a', q4: 'a', q5: 'a',
+                q6: 'a', q7: 'a', q8: 'a', q9: 'a', q10: 'a'
+                // Add answers for questions 11-20
+            },
+            feedback: {
+                q1: "Distributed Password Cracking is not part of OWASP Top 10. The current Top 10 includes Injection, Broken Authentication, Sensitive Data Exposure, XXE, Broken Access Control, Security Misconfiguration, XSS, Insecure Deserialization, Using Components with Known Vulnerabilities, and Insufficient Logging & Monitoring.",
+                q2: "Input validation and output encoding are the most effective defenses against XSS. HTTPS protects data in transit but doesn't prevent XSS, and completely blocking JavaScript is impractical for most web applications.",
+                q3: "Error-based SQLi relies on database error messages to extract information. Union-based uses UNION statements, while blind/time-based infer information from behavior rather than errors.",
+                q4: "CSRF stands for Cross-Site Request Forgery, where unauthorized commands are transmitted from a user the web application trusts.",
+                q5: "X-Frame-Options header prevents clickjacking by controlling whether a page can be rendered in a frame or iframe.",
+                q6: "WAFs primarily filter and monitor HTTP traffic between a web application and the Internet. While they may help with some DDoS, their main purpose is analyzing HTTP requests for attack patterns.",
+                q7: "Parameterized queries are a secure coding practice that prevents SQL injection. The other options are all insecure practices.",
+                q8: "CORS (Cross-Origin Resource Sharing) is a mechanism that allows restricted resources on a web page to be requested from another domain outside the domain from which the first resource was served.",
+                q9: "Burp Suite is specifically designed for web application testing. While the others can be used in web app testing, they are more general-purpose tools.",
+                q10: "CSP is designed to prevent XSS and data injection attacks by specifying which dynamic resources are allowed to load."
+                // Add feedback for questions 11-20
+            }
+        };
+        
+        // Initialize the quiz
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeQuiz(quizConfig);
+            document.getElementById('year').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>
