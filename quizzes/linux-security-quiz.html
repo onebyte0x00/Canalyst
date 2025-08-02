@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux Security Quiz | CyberSec Academy</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="terminal-header">
+        <div class="container">
+            <div class="terminal-bar">
+                <div class="terminal-controls">
+                    <span class="control close"></span>
+                    <span class="control minimize"></span>
+                    <span class="control expand"></span>
+                </div>
+                <div class="terminal-title">root@cybersec-academy:~/quizzes/linux-security</div>
+            </div>
+            <h1><span class="prompt">></span> Linux Security Quiz</h1>
+            <p class="subtitle"><span class="blinking-cursor">_</span> Test your knowledge of Linux hardening and security</p>
+        </div>
+    </header>
+
+    <nav class="neon-nav">
+        <div class="container">
+            <ul>
+                <li><a href="../index.html"><span class="nav-icon">⌂</span> HOME</a></li>
+                <li><a href="../topics/linux-security.html"><span class="nav-icon">⊞</span> TOPICS</a></li>
+                <li><a href="../quizzes/linux-security-quiz.html" class="active"><span class="nav-icon">?</span> QUIZZES</a></li>
+                <li><a href="../commands/linux-commands.html"><span class="nav-icon">$</span> COMMANDS</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="quiz-container">
+            <div class="hud-display">
+                <div class="hud-line">
+                    <span class="hud-prompt">></span>
+                    <span class="hud-text">Initializing Linux Security Quiz...</span>
+                </div>
+                <div class="hud-line">
+                    <span class="hud-prompt">></span>
+                    <span class="hud-text">Topics: Hardening, Permissions, SELinux, Vulnerabilities</span>
+                </div>
+                <div class="hud-line">
+                    <span class="hud-prompt">></span>
+                    <span class="hud-text">20 questions | Time: ~15 minutes</span>
+                </div>
+            </div>
+
+            <form id="linux-security-quiz">
+                <!-- Question 1 -->
+                <div class="question">
+                    <h3>1. What is the minimum secure permission for /etc/shadow?</h3>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="q1-a" name="q1" value="a">
+                            <label for="q1-a">640</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q1-b" name="q1" value="b">
+                            <label for="q1-b">644</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q1-c" name="q1" value="c">
+                            <label for="q1-c">600</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q1-d" name="q1" value="d">
+                            <label for="q1-d">660</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="question">
+                    <h3>2. Which command shows SUID binaries?</h3>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="q2-a" name="q2" value="a">
+                            <label for="q2-a">find / -perm -4000</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q2-b" name="q2" value="b">
+                            <label for="q2-b">ls -l /bin/*</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q2-c" name="q2" value="c">
+                            <label for="q2-c">chmod +s /bin/ls</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q2-d" name="q2" value="d">
+                            <label for="q2-d">stat -c "%a %n" /bin/*</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="question">
+                    <h3>3. What is the purpose of SELinux?</h3>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="q3-a" name="q3" value="a">
+                            <label for="q3-a">Mandatory access control</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q3-b" name="q3" value="b">
+                            <label for="q3-b">Disk encryption</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q3-c" name="q3" value="c">
+                            <label for="q3-c">Network firewall</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q3-d" name="q3" value="d">
+                            <label for="q3-d">Package management</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="question">
+                    <h3>4. Which file controls password aging policies?</h3>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="q4-a" name="q4" value="a">
+                            <label for="q4-a">/etc/login.defs</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q4-b" name="q4" value="b">
+                            <label for="q4-b">/etc/passwd</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q4-c" name="q4" value="c">
+                            <label for="q4-c">/etc/security</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q4-d" name="q4" value="d">
+                            <label for="q4-d">/etc/shadow</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="question">
+                    <h3>5. What does chattr +i do to a file?</h3>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="q5-a" name="q5" value="a">
+                            <label for="q5-a">Makes it immutable</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q5-b" name="q5" value="b">
+                            <label for="q5-b">Encrypts the file</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q5-c" name="q5" value="c">
+                            <label for="q5-c">Changes ownership</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q5-d" name="q5" value="d">
+                            <label for="q5-d">Sets SUID bit</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="question">
+                    <h3>6. Which tool checks for common Linux vulnerabilities?</h3>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="q6-a" name="q6" value="a">
+                            <label for="q6-a">Lynis</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q6-b" name="q6" value="b">
+                            <label for="q6-b">Nmap</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q6-c" name="q6" value="c">
+                            <label for="q6-c">Wireshark</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q6-d" name="q6" value="d">
+                            <label for="q6-d">Metasploit</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="question">
+                    <h3>7. What is the secure alternative to telnet?</h3>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="q7-a" name="q7" value="a">
+                            <label for="q7-a">SSH</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q7-b" name="q7" value="b">
+                            <label for="q7-b">FTP</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q7-c" name="q7" value="c">
+                            <label for="q7-c">Rlogin</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q7-d" name="q7" value="d">
+                            <label for="q7-d">Netcat</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 8 -->
+                <div class="question">
+                    <h3>8. Which file should be empty for secure systems?</h3>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="q8-a" name="q8" value="a">
+                            <label for="q8-a">/etc/securetty</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q8-b" name="q8" value="b">
+                            <label for="q8-b">/etc/hosts.deny</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q8-c" name="q8" value="c">
+                            <label for="q8-c">/etc/fstab</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q8-d" name="q8" value="d">
+                            <label for="q8-d">/etc/resolv.conf</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 9 -->
+                <div class="question">
+                    <h3>9. What does umask 027 mean?</h3>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="q9-a" name="q9" value="a">
+                            <label for="q9-a">Files: 640, Directories: 750</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q9-b" name="q9" value="b">
+                            <label for="q9-b">Files: 644, Directories: 755</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q9-c" name="q9" value="c">
+                            <label for="q9-c">Files: 600, Directories: 700</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q9-d" name="q9" value="d">
+                            <label for="q9-d">Files: 777, Directories: 777</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 10 -->
+                <div class="question">
+                    <h3>10. Which command securely removes a file?</h3>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="q10-a" name="q10" value="a">
+                            <label for="q10-a">shred -u</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q10-b" name="q10" value="b">
+                            <label for="q10-b">rm -f</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q10-c" name="q10" value="c">
+                            <label for="q10-c">del /s</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q10-d" name="q10" value="d">
+                            <label for="q10-d">unlink</label>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" id="submit-quiz" class="cyber-button">SUBMIT QUIZ <span>>></span></button>
+                <div id="quiz-result" class="result"></div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="cyber-footer">
+        <div class="container">
+            <div class="copyright">
+                <p>© <span id="year"></span> CyberSec Academy | Linux Security Quiz | v2.4.1</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/quiz.js"></script>
+    <script>
+        // Quiz-specific answers and feedback
+        const quizConfig = {
+            quizId: 'linux-security-quiz',
+            correctAnswers: {
+                q1: 'a', q2: 'a', q3: 'a', q4: 'a', q5: 'a',
+                q6: 'a', q7: 'a', q8: 'a', q9: 'a', q10: 'a'
+                // Add answers for questions 11-20
+            },
+            feedback: {
+                q1: "/etc/shadow should have permissions 640 (rw-r-----) with root:shadow ownership to protect password hashes.",
+                q2: "find / -perm -4000 locates all SUID binaries which can be security risks if improperly configured.",
+                q3: "SELinux provides mandatory access control (MAC) that restricts what users and processes can do beyond standard Linux permissions.",
+                q4: "/etc/login.defs controls password aging policies like PASS_MAX_DAYS, while /etc/shadow stores the actual password hashes.",
+                q5: "chattr +i makes a file immutable - it cannot be modified, deleted, or renamed, even by root (until the attribute is removed).",
+                q6: "Lynis is a security auditing tool specifically for Linux systems. Nmap is for network scanning, Wireshark for packet analysis, and Metasploit for exploitation.",
+                q7: "SSH (Secure Shell) encrypts all communications, unlike telnet which sends everything (including passwords) in plaintext.",
+                q8: "/etc/securetty controls which terminals root can login from. An empty file prevents direct root logins, forcing use of su/sudo.",
+                q9: "umask 027 results in permissions of 640 (rw-r-----) for files and 750 (rwxr-x---) for directories when subtracted from 666 and 777 respectively.",
+                q10: "shred -u overwrites a file multiple times before deleting it, making recovery difficult. rm simply removes directory entries."
+                // Add feedback for questions 11-20
+            }
+        };
+        
+        // Initialize the quiz
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeQuiz(quizConfig);
+            document.getElementById('year').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>
