@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux Commands | Cyber Security Guide</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Essential Linux Commands</h1>
+            <p>Command-line reference for security professionals</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../topics/networking.html">Topics</a></li>
+                <li><a href="../quizzes/networking-quiz.html">Quizzes</a></li>
+                <li><a href="../commands/linux-commands.html" class="active">Commands</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="breadcrumb">
+            <a href="../index.html">Home</a> &gt; <a href="../commands/linux-commands.html">Commands</a> &gt; Linux
+        </div>
+
+        <article class="topic-content">
+            <h2>Linux Commands for Security Analysis</h2>
+            <p>Essential Linux commands for cybersecurity professionals, system administrators, and penetration testers.</p>
+            
+            <section>
+                <h3>File System Commands</h3>
+                <table class="commands-table">
+                    <thead>
+                        <tr>
+                            <th>Command</th>
+                            <th>Description</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>ls</code></td>
+                            <td>List directory contents</td>
+                            <td><code>ls -la /etc</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>find</code></td>
+                            <td>Search for files</td>
+                            <td><code>find / -name "*.conf"</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>grep</code></td>
+                            <td>Search text using patterns</td>
+                            <td><code>grep "error" /var/log/syslog</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>chmod</code></td>
+                            <td>Change file permissions</td>
+                            <td><code>chmod 600 secret.txt</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>stat</code></td>
+                            <td>Display file status</td>
+                            <td><code>stat suspicious.file</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <h3>Network Commands</h3>
+                <table class="commands-table">
+                    <thead>
+                        <tr>
+                            <th>Command</th>
+                            <th>Description</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>netstat</code></td>
+                            <td>Network statistics</td>
+                            <td><code>netstat -tulnp</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>ss</code></td>
+                            <td>Socket statistics</td>
+                            <td><code>ss -tulnp</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>tcpdump</code></td>
+                            <td>Packet analyzer</td>
+                            <td><code>tcpdump -i eth0 port 80</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>nmap</code></td>
+                            <td>Network scanner</td>
+                            <td><code>nmap -sV 192.168.1.1</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>curl</code></td>
+                            <td>Transfer data from URLs</td>
+                            <td><code>curl -I http://example.com</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <h3>System Information Commands</h3>
+                <table class="commands-table">
+                    <thead>
+                        <tr>
+                            <th>Command</th>
+                            <th>Description</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>ps</code></td>
+                            <td>Process status</td>
+                            <td><code>ps aux | grep ssh</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>top</code></td>
+                            <td>Display processes</td>
+                            <td><code>top</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>uname</code></td>
+                            <td>System information</td>
+                            <td><code>uname -a</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>df</code></td>
+                            <td>Disk space usage</td>
+                            <td><code>df -h</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>free</code></td>
+                            <td>Memory usage</td>
+                            <td><code>free -m</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <h3>Security-Related Commands</h3>
+                <table class="commands-table">
+                    <thead>
+                        <tr>
+                            <th>Command</th>
+                            <th>Description</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>sudo</code></td>
+                            <td>Execute as superuser</td>
+                            <td><code>sudo apt update</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>su</code></td>
+                            <td>Switch user</td>
+                            <td><code>su - username</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>passwd</code></td>
+                            <td>Change password</td>
+                            <td><code>passwd username</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>openssl</code></td>
+                            <td>Cryptography toolkit</td>
+                            <td><code>openssl enc -aes-256-cbc -in file.txt -out file.enc</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>last</code></td>
+                            <td>Show last logged in users</td>
+                            <td><code>last</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <div class="topic-actions">
+                <a href="../quizzes/networking-quiz.html" class="btn">Test Your Knowledge</a>
+                <a href="../commands/windows-commands.html" class="btn btn-secondary">View Windows Commands</a>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2023 Cyber Security Learning Guide | Open Source on GitHub</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
