@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows Security Commands | CyberSec Academy</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="terminal-header">
+        <div class="container">
+            <div class="terminal-bar">
+                <div class="terminal-controls">
+                    <span class="control close"></span>
+                    <span class="control minimize"></span>
+                    <span class="control expand"></span>
+                </div>
+                <div class="terminal-title">C:\cybersec-academy\commands\windows</div>
+            </div>
+            <h1><span class="prompt">></span> Windows Security Commands</h1>
+            <p class="subtitle"><span class="blinking-cursor">_</span> Essential commands for Windows security administration</p>
+        </div>
+    </header>
+
+    <nav class="neon-nav">
+        <div class="container">
+            <ul>
+                <li><a href="../index.html"><span class="nav-icon">⌂</span> HOME</a></li>
+                <li><a href="../topics/windows-security.html"><span class="nav-icon">⊞</span> TOPICS</a></li>
+                <li><a href="../quizzes/windows-security-quiz.html"><span class="nav-icon">?</span> QUIZZES</a></li>
+                <li><a href="windows-commands.html" class="active"><span class="nav-icon">$</span> COMMANDS</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="breadcrumb">
+            <a href="../index.html">Home</a> &gt; <a href="../topics/topics.html">Topics</a> &gt; <a href="windows-commands.html">Windows Commands</a>
+        </div>
+
+        <article class="commands-container">
+            <div class="command-category">
+                <h2><span class="prompt">></span> System Information</h2>
+                <table class="commands-table">
+                    <thead>
+                        <tr>
+                            <th>Command</th>
+                            <th>Description</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>systeminfo</code></td>
+                            <td>Display detailed system configuration</td>
+                            <td><code>systeminfo | findstr /B /C:"OS Name" /C:"OS Version"</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>wmic qfe list</code></td>
+                            <td>List installed updates/hotfixes</td>
+                            <td><code>wmic qfe list brief</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>net statistics workstation</code></td>
+                            <td>Show network statistics</td>
+                            <td><code>net statistics workstation</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="command-category">
+                <h2><span class="prompt">></span> User & Account Management</h2>
+                <table class="commands-table">
+                    <thead>
+                        <tr>
+                            <th>Command</th>
+                            <th>Description</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>net user</code></td>
+                            <td>List/create/modify user accounts</td>
+                            <td><code>net user hacker /add</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>net localgroup</code></td>
+                            <td>Manage local groups</td>
+                            <td><code>net localgroup Administrators hacker /add</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>whoami /priv</code></td>
+                            <td>Show current user privileges</td>
+                            <td><code>whoami /priv</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="command-category">
+                <h2><span class="prompt">></span> Network Security</h2>
+                <table class="commands-table">
+                    <thead>
+                        <tr>
+                            <th>Command</th>
+                            <th>Description</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>netsh advfirewall</code></td>
+                            <td>Configure Windows Firewall</td>
+                            <td><code>netsh advfirewall set allprofiles state on</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>netstat -ano</code></td>
+                            <td>Show active connections with PIDs</td>
+                            <td><code>netstat -ano | findstr LISTENING</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>nslookup</code></td>
+                            <td>DNS diagnostic tool</td>
+                            <td><code>nslookup example.com</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="command-category">
+                <h2><span class="prompt">></span> PowerShell Security Cmdlets</h2>
+                <table class="commands-table">
+                    <thead>
+                        <tr>
+                            <th>Command</th>
+                            <th>Description</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>Get-MpComputerStatus</code></td>
+                            <td>Check Windows Defender status</td>
+                            <td><code>Get-MpComputerStatus | select RealTimeProtectionEnabled</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>Get-NetFirewallRule</code></td>
+                            <td>List firewall rules</td>
+                            <td><code>Get-NetFirewallRule | Where-Object {$_.Enabled -eq "True"}</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>Test-NetConnection</code></td>
+                            <td>Network connectivity tester</td>
+                            <td><code>Test-NetConnection -ComputerName google.com -Port 443</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="command-category">
+                <h2><span class="prompt">></span> Security Configuration</h2>
+                <table class="commands-table">
+                    <thead>
+                        <tr>
+                            <th>Command</th>
+                            <th>Description</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>secedit /export</code></td>
+                            <td>Export security policy</td>
+                            <td><code>secedit /export /cfg secpolicy.inf</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>auditpol /get /category:*</code></td>
+                            <td>View audit policies</td>
+                            <td><code>auditpol /get /category:*</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>gpresult /r</code></td>
+                            <td>Check applied Group Policies</td>
+                            <td><code>gpresult /r</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="command-actions">
+                <a href="../quizzes/windows-security-quiz.html" class="cyber-button">TEST YOUR KNOWLEDGE <span>>></span></a>
+                <a href="../topics/windows-security.html" class="cyber-button cyber-button-secondary">LEARN MORE <span>>></span></a>
+            </div>
+        </article>
+    </main>
+
+    <footer class="cyber-footer">
+        <div class="container">
+            <div class="copyright">
+                <p>© <span id="year"></span> CyberSec Academy | Windows Commands | v2.4.1</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
