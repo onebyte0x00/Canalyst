@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows Security Quiz | CyberSec Academy</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="terminal-header">
+        <div class="container">
+            <div class="terminal-bar">
+                <div class="terminal-controls">
+                    <span class="control close"></span>
+                    <span class="control minimize"></span>
+                    <span class="control expand"></span>
+                </div>
+                <div class="terminal-title">C:\cybersec-academy\quizzes\windows-security</div>
+            </div>
+            <h1><span class="prompt">></span> Windows Security Quiz</h1>
+            <p class="subtitle"><span class="blinking-cursor">_</span> Test your knowledge of Windows security features</p>
+        </div>
+    </header>
+
+    <nav class="neon-nav">
+        <div class="container">
+            <ul>
+                <li><a href="../index.html"><span class="nav-icon">⌂</span> HOME</a></li>
+                <li><a href="../topics/windows-security.html"><span class="nav-icon">⊞</span> TOPICS</a></li>
+                <li><a href="../quizzes/windows-security-quiz.html" class="active"><span class="nav-icon">?</span> QUIZZES</a></li>
+                <li><a href="../commands/windows-commands.html"><span class="nav-icon">$</span> COMMANDS</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="quiz-container">
+            <div class="hud-display">
+                <div class="hud-line">
+                    <span class="hud-prompt">></span>
+                    <span class="hud-text">Initializing Windows Security Quiz...</span>
+                </div>
+                <div class="hud-line">
+                    <span class="hud-prompt">></span>
+                    <span class="hud-text">Topics: Defender, AD, Group Policy, Vulnerabilities</span>
+                </div>
+                <div class="hud-line">
+                    <span class="hud-prompt">></span>
+                    <span class="hud-text">20 questions | Time: ~15 minutes</span>
+                </div>
+            </div>
+
+            <form id="windows-security-quiz">
+                <!-- Question 1 -->
+                <div class="question">
+                    <h3>1. What is Windows Defender ATP now called?</h3>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="q1-a" name="q1" value="a">
+                            <label for="q1-a">Microsoft Defender for Endpoint</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q1-b" name="q1" value="b">
+                            <label for="q1-b">Windows Security Center</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q1-c" name="q1" value="c">
+                            <label for="q1-c">Azure Security Center</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q1-d" name="q1" value="d">
+                            <label for="q1-d">Microsoft Security Essentials</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="question">
+                    <h3>2. Which PowerShell cmdlet checks for Windows updates?</h3>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="q2-a" name="q2" value="a">
+                            <label for="q2-a">Get-WindowsUpdate</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q2-b" name="q2" value="b">
+                            <label for="q2-b">Get-HotFix</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q2-c" name="q2" value="c">
+                            <label for="q2-c">Check-Update</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q2-d" name="q2" value="d">
+                            <label for="q2-d">Get-PendingUpdate</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="question">
+                    <h3>3. What is the primary authentication protocol in Active Directory?</h3>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="q3-a" name="q3" value="a">
+                            <label for="q3-a">Kerberos</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q3-b" name="q3" value="b">
+                            <label for="q3-b">NTLM</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q3-c" name="q3" value="c">
+                            <label for="q3-c">LDAP</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q3-d" name="q3" value="d">
+                            <label for="q3-d">OAuth</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="question">
+                    <h3>4. Which Group Policy setting disables SMBv1?</h3>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="q4-a" name="q4" value="a">
+                            <label for="q4-a">Computer Config > Policies > Windows Components > SMB Client</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q4-b" name="q4" value="b">
+                            <label for="q4-b">User Config > Policies > Control Panel > Network</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q4-c" name="q4" value="c">
+                            <label for="q4-c">Security Settings > Local Policies > Security Options</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q4-d" name="q4" value="d">
+                            <label for="q4-d">Administrative Templates > System > File Explorer</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="question">
+                    <h3>5. What does LAPS stand for?</h3>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="q5-a" name="q5" value="a">
+                            <label for="q5-a">Local Administrator Password Solution</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q5-b" name="q5" value="b">
+                            <label for="q5-b">Lightweight Access Protocol Service</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q5-c" name="q5" value="c">
+                            <label for="q5-c">Logon Authentication Protection System</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q5-d" name="q5" value="d">
+                            <label for="q5-d">Local Account Policy Settings</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="question">
+                    <h3>6. Which Windows feature prevents credential theft?</h3>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="q6-a" name="q6" value="a">
+                            <label for="q6-a">Credential Guard</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q6-b" name="q6" value="b">
+                            <label for="q6-b">Windows Firewall</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q6-c" name="q6" value="c">
+                            <label for="q6-c">BitLocker</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q6-d" name="q6" value="d">
+                            <label for="q6-d">AppLocker</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="question">
+                    <h3>7. What is the most secure Windows authentication level?</h3>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="q7-a" name="q7" value="a">
+                            <label for="q7-a">NTLMv2 only</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q7-b" name="q7" value="b">
+                            <label for="q7-b">Send LM & NTLM responses</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q7-c" name="q7" value="c">
+                            <label for="q7-c">Send LM & NTLM - use NTLMv2 if negotiated</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q7-d" name="q7" value="d">
+                            <label for="q7-d">Send NTLM response only</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 8 -->
+                <div class="question">
+                    <h3>8. Which PowerShell cmdlet enables Windows Defender?</h3>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="q8-a" name="q8" value="a">
+                            <label for="q8-a">Set-MpPreference -DisableRealtimeMonitoring $false</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q8-b" name="q8" value="b">
+                            <label for="q8-b">Enable-WindowsDefender</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q8-c" name="q8" value="c">
+                            <label for="q8-c">Start-DefenderService</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q8-d" name="q8" value="d">
+                            <label for="q8-d">Set-DefenderState -Enabled $true</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 9 -->
+                <div class="question">
+                    <h3>9. What does AppLocker control?</h3>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="q9-a" name="q9" value="a">
+                            <label for="q9-a">Which applications users can run</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q9-b" name="q9" value="b">
+                            <label for="q9-b">Firewall rules for applications</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q9-c" name="q9" value="c">
+                            <label for="q9-c">Application update policies</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q9-d" name="q9" value="d">
+                            <label for="q9-d">Application memory usage</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 10 -->
+                <div class="question">
+                    <h3>10. Which registry key contains Windows AutoRun settings?</h3>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="q10-a" name="q10" value="a">
+                            <label for="q10-a">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q10-b" name="q10" value="b">
+                            <label for="q10-b">HKCU\Control Panel\Startup</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q10-c" name="q10" value="c">
+                            <label for="q10-c">HKLM\SYSTEM\CurrentControlSet\Services</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q10-d" name="q10" value="d">
+                            <label for="q10-d">HKCU\Software\Microsoft\Windows NT\CurrentVersion\Winlogon</label>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" id="submit-quiz" class="cyber-button">SUBMIT QUIZ <span>>></span></button>
+                <div id="quiz-result" class="result"></div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="cyber-footer">
+        <div class="container">
+            <div class="copyright">
+                <p>© <span id="year"></span> CyberSec Academy | Windows Security Quiz | v2.4.1</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/quiz.js"></script>
+    <script>
+        // Quiz-specific answers and feedback
+        const quizConfig = {
+            quizId: 'windows-security-quiz',
+            correctAnswers: {
+                q1: 'a', q2: 'b', q3: 'a', q4: 'a', q5: 'a',
+                q6: 'a', q7: 'a', q8: 'a', q9: 'a', q10: 'a'
+                // Add answers for questions 11-20
+            },
+            feedback: {
+                q1: "Windows Defender ATP was rebranded as Microsoft Defender for Endpoint as part of Microsoft's unified security platform.",
+                q2: "Get-HotFix lists installed updates. There is no native Get-WindowsUpdate cmdlet in PowerShell (though it exists in PSWindowsUpdate module).",
+                q3: "Kerberos is the default authentication protocol in Active Directory since Windows 2000. NTLM is maintained for backward compatibility.",
+                q4: "SMBv1 can be disabled via Computer Configuration > Policies > Windows Components > SMB Client. This is critical as SMBv1 has numerous vulnerabilities.",
+                q5: "LAPS (Local Administrator Password Solution) randomizes local admin passwords across domain-joined systems and stores them securely in AD.",
+                q6: "Credential Guard uses virtualization-based security to isolate secrets and prevent attacks like Pass-the-Hash.",
+                q7: "NTLMv2 only is the most secure setting. LM hashes are extremely weak and should never be used.",
+                q8: "Set-MpPreference with -DisableRealtimeMonitoring $false enables Windows Defender real-time protection via PowerShell.",
+                q9: "AppLocker controls application execution through publisher rules, path rules, and hash rules.",
+                q10: "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run contains AutoRun entries that execute at login. This is a common persistence mechanism for malware."
+                // Add feedback for questions 11-20
+            }
+        };
+        
+        // Initialize the quiz
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeQuiz(quizConfig);
+            document.getElementById('year').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>
