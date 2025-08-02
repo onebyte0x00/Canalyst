@@ -1,4 +1,4 @@
-// Quiz functionality
+// Enhanced Quiz functionality
 function initializeQuiz(config) {
     const quizForm = document.getElementById(config.quizId);
     const submitBtn = document.getElementById('submit-quiz');
@@ -9,7 +9,21 @@ function initializeQuiz(config) {
     submitBtn.addEventListener('click', function() {
         const results = checkQuizAnswers(quizForm, config.correctAnswers);
         displayQuizResults(results, config.feedback, resultDiv);
+        
+        // Store quiz results in localStorage
+        localStorage.setItem(`quiz-${config.quizId}-score`, `${results.score}/${results.total}`);
+        localStorage.setItem(`quiz-${config.quizId}-percentage`, results.percentage);
     });
+    
+    // Load previous results if they exist
+    const previousScore = localStorage.getItem(`quiz-${config.quizId}-score`);
+    const previousPercentage = localStorage.getItem(`quiz-${config.quizId}-percentage`);
+    
+    if (previousScore && previousPercentage) {
+        resultDiv.innerHTML = `<p>Your previous score: ${previousScore} (${previousPercentage}%)</p>`;
+        resultDiv.className = 'result info';
+        resultDiv.style.display = 'block';
+    }
 }
 
 function checkQuizAnswers(quizForm, correctAnswers) {
@@ -94,3 +108,16 @@ function displayQuizResults(results, feedback, resultDiv) {
     // Scroll to results
     resultDiv.scrollIntoView({ behavior: 'smooth' });
 }
+
+// Add info style to CSS
+const infoStyle = `
+.result.info {
+    background-color: rgba(52, 152, 219, 0.1);
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+}
+`;
+
+const styleElement = document.createElement('style');
+styleElement.innerHTML = infoStyle;
+document.head.appendChild(styleElement);
