@@ -1135,3 +1135,65 @@ body.hack-mode .neon-nav a.active {
     margin-top: 2rem;
     justify-content: center;
 }
+/* Commands Page Styles */
+.commands-container {
+    background-color: rgba(20, 20, 30, 0.8);
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.command-category {
+    margin-bottom: 2.5rem;
+}
+
+.command-category h2 {
+    color: var(--cyber-teal);
+    border-bottom: 1px solid rgba(0, 240, 255, 0.3);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.commands-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+}
+
+.commands-table th {
+    background-color: rgba(0, 102, 255, 0.2);
+    color: var(--cyber-teal);
+    text-align: left;
+    padding: 0.75rem;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.commands-table td {
+    padding: 0.75rem;
+    border-bottom: 1px solid rgba(0, 240, 255, 0.1);
+    vertical-align: top;
+}
+
+.commands-table tr:nth-child(even) {
+    background-color: rgba(30, 30, 45, 0.5);
+}
+
+.commands-table tr:hover {
+    background-color: rgba(0, 102, 255, 0.1);
+}
+
+.commands-table code {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--matrix-green);
+    white-space: nowrap;
+}
+
+.command-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
