@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberSec Topics Hub | Interactive Learning</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="terminal-header">
+        <div class="container">
+            <div class="terminal-bar">
+                <div class="terminal-controls">
+                    <span class="control close"></span>
+                    <span class="control minimize"></span>
+                    <span class="control expand"></span>
+                </div>
+                <div class="terminal-title">root@cybersec-academy:~/topics</div>
+            </div>
+            <h1><span class="prompt">></span> Cyber Security Topics</h1>
+            <p class="subtitle"><span class="blinking-cursor">_</span> Master essential security concepts</p>
+        </div>
+    </header>
+
+    <nav class="neon-nav">
+        <div class="container">
+            <ul>
+                <li><a href="../index.html"><span class="nav-icon">⌂</span> HOME</a></li>
+                <li><a href="topics.html" class="active"><span class="nav-icon">⊞</span> TOPICS</a></li>
+                <li><a href="../quizzes/quizzes.html"><span class="nav-icon">?</span> QUIZZES</a></li>
+                <li><a href="../commands/linux-commands.html"><span class="nav-icon">$</span> COMMANDS</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="topics-hub">
+            <div class="hud-display">
+                <div class="hud-line">
+                    <span class="hud-prompt">></span>
+                    <span class="hud-text">Available Security Topics:</span>
+                </div>
+            </div>
+
+            <div class="topics-grid">
+                <a href="networking.html" class="topic-card" data-tilt>
+                    <div class="topic-icon">🌐</div>
+                    <h3>Network Security</h3>
+                    <p>Protocols, firewalls, network attacks and defenses</p>
+                    <div class="topic-meta">
+                        <span class="lessons">12 lessons</span>
+                        <span class="difficulty intermediate">Intermediate</span>
+                    </div>
+                </a>
+
+                <a href="web-security.html" class="topic-card" data-tilt>
+                    <div class="topic-icon">🕸️</div>
+                    <h3>Web Security</h3>
+                    <p>OWASP Top 10, XSS, SQLi, CSRF, and web app defenses</p>
+                    <div class="topic-meta">
+                        <span class="lessons">15 lessons</span>
+                        <span class="difficulty advanced">Advanced</span>
+                    </div>
+                </a>
+
+                <a href="cryptography.html" class="topic-card" data-tilt>
+                    <div class="topic-icon">🔐</div>
+                    <h3>Cryptography</h3>
+                    <p>Encryption, hashing, PKI, and cryptographic protocols</p>
+                    <div class="topic-meta">
+                        <span class="lessons">10 lessons</span>
+                        <span class="difficulty intermediate">Intermediate</span>
+                    </div>
+                </a>
+
+                <a href="malware.html" class="topic-card" data-tilt>
+                    <div class="topic-icon">🦠</div>
+                    <h3>Malware Analysis</h3>
+                    <p>Viruses, trojans, ransomware, and analysis techniques</p>
+                    <div class="topic-meta">
+                        <span class="lessons">8 lessons</span>
+                        <span class="difficulty advanced">Advanced</span>
+                    </div>
+                </a>
+
+                <a href="forensics.html" class="topic-card" data-tilt>
+                    <div class="topic-icon">🔍</div>
+                    <h3>Digital Forensics</h3>
+                    <p>Evidence collection, memory analysis, and forensic tools</p>
+                    <div class="topic-meta">
+                        <span class="lessons">9 lessons</span>
+                        <span class="difficulty intermediate">Intermediate</span>
+                    </div>
+                </a>
+
+                <a href="linux-security.html" class="topic-card" data-tilt>
+                    <div class="topic-icon">🐧</div>
+                    <h3>Linux Security</h3>
+                    <p>Hardening, permissions, SELinux, and secure configuration</p>
+                    <div class="topic-meta">
+                        <span class="lessons">11 lessons</span>
+                        <span class="difficulty beginner">Beginner</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="cyber-footer">
+        <div class="container">
+            <div class="copyright">
+                <p>© <span id="year"></span> CyberSec Academy | Topics Hub | v2.4.1</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script>
+        // Initialize card tilt effect
+        VanillaTilt.init(document.querySelectorAll(".topic-card"), {
+            max: 15,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.2,
+        });
+
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
