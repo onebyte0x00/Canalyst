@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Networking Commands | CyberSec Academy</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="terminal-header">
+        <div class="container">
+            <div class="terminal-bar">
+                <div class="terminal-controls">
+                    <span class="control close"></span>
+                    <span class="control minimize"></span>
+                    <span class="control expand"></span>
+                </div>
+                <div class="terminal-title">root@cybersec-academy:~/commands/networking</div>
+            </div>
+            <h1><span class="prompt">></span> Networking Commands</h1>
+            <p class="subtitle"><span class="blinking-cursor">_</span> Essential commands for network security analysis</p>
+        </div>
+    </header>
+
+    <nav class="neon-nav">
+        <div class="container">
+            <ul>
+                <li><a href="../index.html"><span class="nav-icon">⌂</span> HOME</a></li>
+                <li><a href="../topics/networking.html"><span class="nav-icon">⊞</span> TOPICS</a></li>
+                <li><a href="../quizzes/networking-quiz.html"><span class="nav-icon">?</span> QUIZZES</a></li>
+                <li><a href="networking-commands.html" class="active"><span class="nav-icon">$</span> COMMANDS</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="breadcrumb">
+            <a href="../index.html">Home</a> &gt; <a href="../topics/topics.html">Topics</a> &gt; <a href="networking-commands.html">Networking Commands</a>
+        </div>
+
+        <article class="commands-container">
+            <div class="command-category">
+                <h2><span class="prompt">></span> Basic Network Diagnostics</h2>
+                <table class="commands-table">
+                    <thead>
+                        <tr>
+                            <th>Command</th>
+                            <th>Description</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>ping</code></td>
+                            <td>Test network connectivity</td>
+                            <td><code>ping -c 4 google.com</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>traceroute</code></td>
+                            <td>Trace path to destination (Linux)</td>
+                            <td><code>traceroute google.com</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>tracert</code></td>
+                            <td>Trace path to destination (Windows)</td>
+                            <td><code>tracert google.com</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="command-category">
+                <h2><span class="prompt">></span> Port & Connection Analysis</h2>
+                <table class="commands-table">
+                    <thead>
+                        <tr>
+                            <th>Command</th>
+                            <th>Description</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>netstat</code></td>
+                            <td>Network statistics and connections</td>
+                            <td><code>netstat -tulnp</code> (Linux)<br><code>netstat -ano</code> (Windows)</td>
+                        </tr>
+                        <tr>
+                            <td><code>ss</code></td>
+                            <td>Socket statistics (Linux)</td>
+                            <td><code>ss -tulnp</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>lsof</code></td>
+                            <td>List open files and ports</td>
+                            <td><code>lsof -i :80</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="command-category">
+                <h2><span class="prompt">></span> Network Scanning</h2>
+                <table class="commands-table">
+                    <thead>
+                        <tr>
+                            <th>Command</th>
+                            <th>Description</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>nmap</code></td>
+                            <td>Network discovery and security auditing</td>
+                            <td><code>nmap -sV -A 192.168.1.1</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>hping3</code></td>
+                            <td>Packet crafting and analysis</td>
+                            <td><code>hping3 -S -p 80 -c 5 google.com</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>netdiscover</code></td>
+                            <td>Active/passive ARP reconnaissance</td>
+                            <td><code>netdiscover -i eth0</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="command-category">
+                <h2><span class="prompt">></span> Packet Analysis</h2>
+                <table class="commands-table">
+                    <thead>
+                        <tr>
+                            <th>Command</th>
+                            <th>Description</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>tcpdump</code></td>
+                            <td>Command-line packet analyzer</td>
+                            <td><code>tcpdump -i eth0 port 80</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>tshark</code></td>
+                            <td>CLI version of Wireshark</td>
+                            <td><code>tshark -i eth0 -f "tcp port 443"</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>ngrep</code></td>
+                            <td>Network grep - filter network traffic</td>
+                            <td><code>ngrep -q -W byline "password" port 80</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="command-category">
+                <h2><span class="prompt">></span> DNS & Web Tools</h2>
+                <table class="commands-table">
+                    <thead>
+                        <tr>
+                            <th>Command</th>
+                            <th>Description</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>dig</code></td>
+                            <td>DNS lookup utility</td>
+                            <td><code>dig example.com ANY</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>host</code></td>
+                            <td>DNS lookup utility</td>
+                            <td><code>host -t mx example.com</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>curl</code></td>
+                            <td>Transfer data from URLs</td>
+                            <td><code>curl -v -X POST https://example.com</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="command-category">
+                <h2><span class="prompt">></span> Firewall & Routing</h2>
+                <table class="commands-table">
+                    <thead>
+                        <tr>
+                            <th>Command</th>
+                            <th>Description</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>iptables</code></td>
+                            <td>Linux firewall configuration</td>
+                            <td><code>iptables -A INPUT -p tcp --dport 22 -j ACCEPT</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>ufw</code></td>
+                            <td>Uncomplicated Firewall (Linux)</td>
+                            <td><code>ufw allow 22/tcp</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>route</code></td>
+                            <td>Show/manipulate routing table</td>
+                            <td><code>route -n</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="command-actions">
+                <a href="../quizzes/networking-quiz.html" class="cyber-button">TEST YOUR KNOWLEDGE <span>>></span></a>
+                <a href="../topics/networking.html" class="cyber-button cyber-button-secondary">LEARN MORE <span>>></span></a>
+            </div>
+        </article>
+    </main>
+
+    <footer class="cyber-footer">
+        <div class="container">
+            <div class="copyright">
+                <p>© <span id="year"></span> CyberSec Academy | Networking Commands | v2.4.1</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
