@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Forensics Quiz | CyberSec Academy</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="terminal-header">
+        <div class="container">
+            <div class="terminal-bar">
+                <div class="terminal-controls">
+                    <span class="control close"></span>
+                    <span class="control minimize"></span>
+                    <span class="control expand"></span>
+                </div>
+                <div class="terminal-title">root@cybersec-academy:~/quizzes/forensics</div>
+            </div>
+            <h1><span class="prompt">></span> Digital Forensics Quiz</h1>
+            <p class="subtitle"><span class="blinking-cursor">_</span> Test your knowledge of forensic investigation techniques</p>
+        </div>
+    </header>
+
+    <nav class="neon-nav">
+        <div class="container">
+            <ul>
+                <li><a href="../index.html"><span class="nav-icon">⌂</span> HOME</a></li>
+                <li><a href="../topics/forensics.html"><span class="nav-icon">⊞</span> TOPICS</a></li>
+                <li><a href="../quizzes/forensics-quiz.html" class="active"><span class="nav-icon">?</span> QUIZZES</a></li>
+                <li><a href="../commands/forensics-commands.html"><span class="nav-icon">$</span> COMMANDS</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="quiz-container">
+            <div class="hud-display">
+                <div class="hud-line">
+                    <span class="hud-prompt">></span>
+                    <span class="hud-text">Initializing Digital Forensics Quiz...</span>
+                </div>
+                <div class="hud-line">
+                    <span class="hud-prompt">></span>
+                    <span class="hud-text">Topics: Evidence Collection, Memory Analysis, Tools</span>
+                </div>
+                <div class="hud-line">
+                    <span class="hud-prompt">></span>
+                    <span class="hud-text">20 questions | Time: ~15 minutes</span>
+                </div>
+            </div>
+
+            <form id="forensics-quiz">
+                <!-- Question 1 -->
+                <div class="question">
+                    <h3>1. What is the first step in digital forensics?</h3>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="q1-a" name="q1" value="a">
+                            <label for="q1-a">Preserve the evidence</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q1-b" name="q1" value="b">
+                            <label for="q1-b">Make a copy of the hard drive</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q1-c" name="q1" value="c">
+                            <label for="q1-c">Interview witnesses</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q1-d" name="q1" value="d">
+                            <label for="q1-d">Analyze network logs</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="question">
+                    <h3>2. Which tool creates forensic disk images?</h3>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="q2-a" name="q2" value="a">
+                            <label for="q2-a">FTK Imager</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q2-b" name="q2" value="b">
+                            <label for="q2-b">Wireshark</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q2-c" name="q2" value="c">
+                            <label for="q2-c">Autopsy</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q2-d" name="q2" value="d">
+                            <label for="q2-d">Volatility</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="question">
+                    <h3>3. What does a write blocker do?</h3>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="q3-a" name="q3" value="a">
+                            <label for="q3-a">Prevents modification of evidence media</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q3-b" name="q3" value="b">
+                            <label for="q3-b">Encrypts forensic images</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q3-c" name="q3" value="c">
+                            <label for="q3-c">Blocks unauthorized network access</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q3-d" name="q3" value="d">
+                            <label for="q3-d">Prevents data recovery</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="question">
+                    <h3>4. Which file format is commonly used for forensic images?</h3>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="q4-a" name="q4" value="a">
+                            <label for="q4-a">EnCase (E01)</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q4-b" name="q4" value="b">
+                            <label for="q4-b">JPEG</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q4-c" name="q4" value="c">
+                            <label for="q4-c">MP4</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q4-d" name="q4" value="d">
+                            <label for="q4-d">DOCX</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="question">
+                    <h3>5. What is the purpose of hashing in forensics?</h3>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="q5-a" name="q5" value="a">
+                            <label for="q5-a">Verify evidence integrity</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q5-b" name="q5" value="b">
+                            <label for="q5-b">Recover deleted files</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q5-c" name="q5" value="c">
+                            <label for="q5-c">Encrypt sensitive data</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q5-d" name="q5" value="d">
+                            <label for="q5-d">Speed up analysis</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="question">
+                    <h3>6. Which tool analyzes memory dumps?</h3>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="q6-a" name="q6" value="a">
+                            <label for="q6-a">Volatility</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q6-b" name="q6" value="b">
+                            <label for="q6-b">Autopsy</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q6-c" name="q6" value="c">
+                            <label for="q6-c">FTK</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q6-d" name="q6" value="d">
+                            <label for="q6-d">EnCase</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="question">
+                    <h3>7. What does the chain of custody document?</h3>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="q7-a" name="q7" value="a">
+                            <label for="q7-a">Evidence handling from collection to court</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q7-b" name="q7" value="b">
+                            <label for="q7-b">Network connections</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q7-c" name="q7" value="c">
+                            <label for="q7-c">Password hashes</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q7-d" name="q7" value="d">
+                            <label for="q7-d">File permissions</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 8 -->
+                <div class="question">
+                    <h3>8. Where are Windows Registry hives stored?</h3>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="q8-a" name="q8" value="a">
+                            <label for="q8-a">C:\Windows\System32\config</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q8-b" name="q8" value="b">
+                            <label for="q8-b">C:\Program Files</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q8-c" name="q8" value="c">
+                            <label for="q8-c">C:\Users\Default</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q8-d" name="q8" value="d">
+                            <label for="q8-d">C:\Temp</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 9 -->
+                <div class="question">
+                    <h3>9. What is slack space?</h3>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="q9-a" name="q9" value="a">
+                            <label for="q9-a">Unused space in disk clusters that may contain old data</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q9-b" name="q9" value="b">
+                            <label for="q9-b">Free space on the hard drive</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q9-c" name="q9" value="c">
+                            <label for="q9-c">Temporary internet files</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q9-d" name="q9" value="d">
+                            <label for="q9-d">Unallocated partitions</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 10 -->
+                <div class="question">
+                    <h3>10. Which command shows network connections on Windows?</h3>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="q10-a" name="q10" value="a">
+                            <label for="q10-a">netstat -ano</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q10-b" name="q10" value="b">
+                            <label for="q10-b">ipconfig /all</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q10-c" name="q10" value="c">
+                            <label for="q10-c">tracert</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q10-d" name="q10" value="d">
+                            <label for="q10-d">ping</label>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" id="submit-quiz" class="cyber-button">SUBMIT QUIZ <span>>></span></button>
+                <div id="quiz-result" class="result"></div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="cyber-footer">
+        <div class="container">
+            <div class="copyright">
+                <p>© <span id="year"></span> CyberSec Academy | Digital Forensics Quiz | v2.4.1</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/quiz.js"></script>
+    <script>
+        // Quiz-specific answers and feedback
+        const quizConfig = {
+            quizId: 'forensics-quiz',
+            correctAnswers: {
+                q1: 'a', q2: 'a', q3: 'a', q4: 'a', q5: 'a',
+                q6: 'a', q7: 'a', q8: 'a', q9: 'a', q10: 'a'
+                // Add answers for questions 11-20
+            },
+            feedback: {
+                q1: "Preservation of evidence is the first critical step to ensure data isn't altered or destroyed.",
+                q2: "FTK Imager is specifically designed for creating forensic images while maintaining evidence integrity.",
+                q3: "Write blockers prevent any writes to the evidence media, preserving the original data.",
+                q4: "EnCase E01 is a forensic image format that includes metadata and checksums for verification.",
+                q5: "Hashing creates unique fingerprints of files to verify they haven't been altered (MD5, SHA-1, etc.).",
+                q6: "Volatility is the premier open-source memory forensics framework for analyzing RAM dumps.",
+                q7: "Chain of custody documents everyone who handled the evidence and when, ensuring admissibility in court.",
+                q8: "Registry hives are stored in C:\\Windows\\System32\\config (SAM, SECURITY, SOFTWARE, SYSTEM) and user NTUSER.DAT files.",
+                q9: "Slack space is the unused portion of a disk cluster that may contain remnants of previous files.",
+                q10: "netstat -ano shows all network connections and associated process IDs (PIDs) on Windows systems."
+                // Add feedback for questions 11-20
+            }
+        };
+        
+        // Initialize the quiz
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeQuiz(quizConfig);
+            document.getElementById('year').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>
