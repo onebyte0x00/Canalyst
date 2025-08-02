@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberSec Quizzes | Interactive Learning</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="terminal-header">
+        <div class="container">
+            <div class="terminal-bar">
+                <div class="terminal-controls">
+                    <span class="control close"></span>
+                    <span class="control minimize"></span>
+                    <span class="control expand"></span>
+                </div>
+                <div class="terminal-title">root@cybersec-academy:~/quizzes</div>
+            </div>
+            <h1><span class="prompt">></span> Cyber Security Quizzes</h1>
+            <p class="subtitle"><span class="blinking-cursor">_</span> Test your knowledge across all security domains</p>
+        </div>
+    </header>
+
+    <nav class="neon-nav">
+        <div class="container">
+            <ul>
+                <li><a href="../index.html"><span class="nav-icon">⌂</span> HOME</a></li>
+                <li><a href="../topics/networking.html"><span class="nav-icon">⊞</span> TOPICS</a></li>
+                <li><a href="quizzes.html" class="active"><span class="nav-icon">?</span> QUIZZES</a></li>
+                <li><a href="../commands/linux-commands.html"><span class="nav-icon">$</span> COMMANDS</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="quiz-hub">
+            <div class="hud-display">
+                <div class="hud-line">
+                    <span class="hud-prompt">></span>
+                    <span class="hud-text">Available Security Quizzes:</span>
+                </div>
+            </div>
+
+            <div class="quiz-grid">
+                <a href="networking-quiz.html" class="quiz-card">
+                    <div class="quiz-icon">🌐</div>
+                    <h3>Networking Security</h3>
+                    <p>Protocols, firewalls, attacks and defenses</p>
+                    <div class="quiz-stats">20 questions</div>
+                </a>
+
+                <a href="web-security-quiz.html" class="quiz-card">
+                    <div class="quiz-icon">🕸️</div>
+                    <h3>Web Security</h3>
+                    <p>OWASP Top 10, XSS, SQLi, CSRF</p>
+                    <div class="quiz-stats">20 questions</div>
+                </a>
+
+                <a href="linux-security-quiz.html" class="quiz-card">
+                    <div class="quiz-icon">🐧</div>
+                    <h3>Linux Security</h3>
+                    <p>Hardening, permissions, SELinux</p>
+                    <div class="quiz-stats">20 questions</div>
+                </a>
+
+                <a href="windows-security-quiz.html" class="quiz-card">
+                    <div class="quiz-icon">🪟</div>
+                    <h3>Windows Security</h3>
+                    <p>Defender, Active Directory, Group Policy</p>
+                    <div class="quiz-stats">20 questions</div>
+                </a>
+
+                <a href="malware-quiz.html" class="quiz-card">
+                    <div class="quiz-icon">🦠</div>
+                    <h3>Malware Analysis</h3>
+                    <p>Viruses, trojans, ransomware, analysis</p>
+                    <div class="quiz-stats">20 questions</div>
+                </a>
+
+                <a href="forensics-quiz.html" class="quiz-card">
+                    <div class="quiz-icon">🔍</div>
+                    <h3>Digital Forensics</h3>
+                    <p>Evidence collection, memory analysis</p>
+                    <div class="quiz-stats">20 questions</div>
+                </a>
+
+                <a href="cryptography-quiz.html" class="quiz-card">
+                    <div class="quiz-icon">🔐</div>
+                    <h3>Cryptography</h3>
+                    <p>Encryption, hashing, PKI, protocols</p>
+                    <div class="quiz-stats">20 questions</div>
+                </a>
+
+                <a href="compliance-quiz.html" class="quiz-card">
+                    <div class="quiz-icon">📜</div>
+                    <h3>Compliance</h3>
+                    <p>GDPR, HIPAA, PCI-DSS, NIST</p>
+                    <div class="quiz-stats">20 questions</div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="cyber-footer">
+        <div class="container">
+            <div class="copyright">
+                <p>© <span id="year"></span> CyberSec Academy | Quizzes Hub | v2.4.1</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
