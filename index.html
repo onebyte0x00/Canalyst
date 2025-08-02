@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberSec Academy | Interactive Learning</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Oxanium:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="matrix-bg"></div>
+    
+    <!-- Terminal-style Header -->
+    <header class="terminal-header">
+        <div class="container">
+            <div class="terminal-bar">
+                <div class="terminal-controls">
+                    <span class="control close"></span>
+                    <span class="control minimize"></span>
+                    <span class="control expand"></span>
+                </div>
+                <div class="terminal-title">root@cybersec-academy:~</div>
+            </div>
+            <div class="typewriter">
+                <h1><span class="prompt">></span> CyberSec Academy</h1>
+                <p class="subtitle"><span class="blinking-cursor">_</span> Interactive cybersecurity training platform</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Glowing Navigation -->
+    <nav class="neon-nav">
+        <div class="container">
+            <ul>
+                <li><a href="index.html" class="active"><span class="nav-icon">⌂</span> HOME</a></li>
+                <li><a href="topics/networking.html"><span class="nav-icon">⊞</span> TOPICS</a></li>
+                <li><a href="quizzes/networking-quiz.html"><span class="nav-icon">?</span> QUIZZES</a></li>
+                <li><a href="commands/linux-commands.html"><span class="nav-icon">$</span> COMMANDS</a></li>
+                <li><a href="#" id="hack-mode"><span class="nav-icon">#</span> HACK MODE</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content with Cyberpunk Style -->
+    <main class="container cyber-main">
+        <!-- Hero Section with Animated Terminal -->
+        <section class="cyber-hero">
+            <div class="hud-display">
+                <div class="hud-line">
+                    <span class="hud-prompt">></span>
+                    <span class="hud-text">Initializing Cyber Learning Platform...</span>
+                </div>
+                <div class="hud-line">
+                    <span class="hud-prompt">></span>
+                    <span class="hud-text">Loading modules: <span class="loading-bar"></span></span>
+                </div>
+                <div class="hud-line">
+                    <span class="hud-prompt">></span>
+                    <span class="hud-text">System ready. Choose your path:</span>
+                </div>
+            </div>
+
+            <div class="cyber-grid">
+                <div class="cyber-card" data-tilt>
+                    <div class="card-header">
+                        <h3>Topics</h3>
+                        <div class="card-icon">📚</div>
+                    </div>
+                    <div class="card-content">
+                        <p>Master cybersecurity concepts through interactive learning modules.</p>
+                        <ul class="cyber-list">
+                            <li>Network Security</li>
+                            <li>Cryptography</li>
+                            <li>Ethical Hacking</li>
+                            <li>Malware Analysis</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="topics/networking.html" class="cyber-button">EXPLORE <span>>></span></a>
+                    </div>
+                </div>
+
+                <div class="cyber-card" data-tilt>
+                    <div class="card-header">
+                        <h3>Quizzes</h3>
+                        <div class="card-icon">🔍</div>
+                    </div>
+                    <div class="card-content">
+                        <p>Test your knowledge with our challenge-based assessments.</p>
+                        <ul class="cyber-list">
+                            <li>Timed Challenges</li>
+                            <li>Real-world Scenarios</li>
+                            <li>Progress Tracking</li>
+                            <li>Expert Feedback</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="quizzes/networking-quiz.html" class="cyber-button">START QUIZ <span>>></span></a>
+                    </div>
+                </div>
+
+                <div class="cyber-card" data-tilt>
+                    <div class="card-header">
+                        <h3>Commands</h3>
+                        <div class="card-icon">⌨️</div>
+                    </div>
+                    <div class="card-content">
+                        <p>Essential command references for security tools and systems.</p>
+                        <ul class="cyber-list">
+                            <li>Linux Security</li>
+                            <li>Windows Hardening</li>
+                            <li>Network Tools</li>
+                            <li>Forensics</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="commands/linux-commands.html" class="cyber-button">VIEW REFERENCE <span>>></span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Live Stats Counter -->
+        <section class="live-stats">
+            <div class="stat-box">
+                <div class="stat-number" data-count="357">0</div>
+                <div class="stat-label">Lessons Available</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number" data-count="8921">0</div>
+                <div class="stat-label">Security Challenges</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number" data-count="154">0</div>
+                <div class="stat-label">Hands-on Labs</div>
+            </div>
+        </section>
+
+        <!-- Recent Activity Feed -->
+        <section class="activity-feed">
+            <h2><span class="prompt">></span> RECENT ACTIVITY</h2>
+            <div class="feed-container">
+                <div class="feed-item">
+                    <div class="feed-time">[10:42:35]</div>
+                    <div class="feed-text">User <span class="user">whitehat_93</span> completed <span class="challenge">Network Pentest Quiz</span> with score 92%</div>
+                </div>
+                <div class="feed-item">
+                    <div class="feed-time">[10:38:12]</div>
+                    <div class="feed-text">New module added: <span class="module">Advanced Cryptography Techniques</span></div>
+                </div>
+                <div class="feed-item">
+                    <div class="feed-time">[10:35:47]</div>
+                    <div class="feed-text">User <span class="user">cyber_ninja</span> unlocked <span class="badge">Forensics Expert</span> badge</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Hacker-style Footer -->
+    <footer class="cyber-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>CYBERSEC ACADEMY</h3>
+                    <p>Training the next generation of cybersecurity professionals through hands-on, interactive learning.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">[GitHub]</a>
+                        <a href="#" class="social-icon">[Discord]</a>
+                        <a href="#" class="social-icon">[Twitter]</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>QUICK ACCESS</h3>
+                    <ul>
+                        <li><a href="#">Getting Started</a></li>
+                        <li><a href="#">Learning Paths</a></li>
+                        <li><a href="#">Challenge Arena</a></li>
+                        <li><a href="#">Certification Prep</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>RESOURCES</h3>
+                    <ul>
+                        <li><a href="#">Cheat Sheets</a></li>
+                        <li><a href="#">Tool Directory</a></li>
+                        <li><a href="#">Security News</a></li>
+                        <li><a href="#">CTF Events</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© <span id="year"></span> CyberSec Academy | Open Source on GitHub | v2.4.1</p>
+                <div class="system-status">
+                    <span class="status-indicator online"></span>
+                    <span class="status-text">SYSTEM STATUS: OPERATIONAL</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script>
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Animate stats counters
+        const counters = document.querySelectorAll('.stat-number');
+        const speed = 200;
+        
+        counters.forEach(counter => {
+            const target = +counter.getAttribute('data-count');
+            const count = +counter.innerText;
+            const increment = target / speed;
+            
+            if (count < target) {
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(updateCount, 1);
+            } else {
+                counter.innerText = target;
+            }
+            
+            function updateCount() {
+                const count = +counter.innerText;
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(updateCount, 1);
+                } else {
+                    counter.innerText = target;
+                }
+            }
+        });
+        
+        // Hack mode toggle
+        document.getElementById('hack-mode').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.body.classList.toggle('hack-mode');
+            this.classList.toggle('active');
+            
+            if (document.body.classList.contains('hack-mode')) {
+                // Start matrix animation
+                startMatrix();
+                this.innerHTML = '<span class="nav-icon">#</span> NORMAL MODE';
+            } else {
+                // Stop matrix animation
+                stopMatrix();
+                this.innerHTML = '<span class="nav-icon">#</span> HACK MODE';
+            }
+        });
+        
+        // Matrix animation functions
+        function startMatrix() {
+            const matrixBg = document.querySelector('.matrix-bg');
+            matrixBg.style.display = 'block';
+            // Matrix animation would be implemented here
+        }
+        
+        function stopMatrix() {
+            const matrixBg = document.querySelector('.matrix-bg');
+            matrixBg.style.display = 'none';
+        }
+        
+        // Initialize card tilting
+        VanillaTilt.init(document.querySelectorAll(".cyber-card"), {
+            max: 15,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.2,
+        });
+    </script>
+</body>
+</html>
